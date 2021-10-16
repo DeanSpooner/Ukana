@@ -1,0 +1,23 @@
+.Home {
+  text-align: left;
+}
+
+.UkanaHeader,
+.UkanaHeaderJp {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: 500;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.UkanaHeaderJp {
+  color: #828282;
+  font-weight: 300;
+}
+
+.Subheader {
+  margin: 0;
+  margin-left: 1rem;
+  font-style: italic;
+}
