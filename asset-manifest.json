@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Ukana/static/css/main.9d5a8178.chunk.css",
-    "main.js": "/Ukana/static/js/main.0932955b.chunk.js",
-    "main.js.map": "/Ukana/static/js/main.0932955b.chunk.js.map",
-    "runtime-main.js": "/Ukana/static/js/runtime-main.f3801139.js",
-    "runtime-main.js.map": "/Ukana/static/js/runtime-main.f3801139.js.map",
-    "static/js/2.36085f7f.chunk.js": "/Ukana/static/js/2.36085f7f.chunk.js",
-    "static/js/2.36085f7f.chunk.js.map": "/Ukana/static/js/2.36085f7f.chunk.js.map",
-    "index.html": "/Ukana/index.html",
-    "static/css/main.9d5a8178.chunk.css.map": "/Ukana/static/css/main.9d5a8178.chunk.css.map",
-    "static/js/2.36085f7f.chunk.js.LICENSE.txt": "/Ukana/static/js/2.36085f7f.chunk.js.LICENSE.txt"
+    "main.css": "/ukana/static/css/main.9d5a8178.chunk.css",
+    "main.js": "/ukana/static/js/main.0932955b.chunk.js",
+    "main.js.map": "/ukana/static/js/main.0932955b.chunk.js.map",
+    "runtime-main.js": "/ukana/static/js/runtime-main.4aec041d.js",
+    "runtime-main.js.map": "/ukana/static/js/runtime-main.4aec041d.js.map",
+    "static/js/2.36085f7f.chunk.js": "/ukana/static/js/2.36085f7f.chunk.js",
+    "static/js/2.36085f7f.chunk.js.map": "/ukana/static/js/2.36085f7f.chunk.js.map",
+    "index.html": "/ukana/index.html",
+    "static/css/main.9d5a8178.chunk.css.map": "/ukana/static/css/main.9d5a8178.chunk.css.map",
+    "static/js/2.36085f7f.chunk.js.LICENSE.txt": "/ukana/static/js/2.36085f7f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3801139.js",
+    "static/js/runtime-main.4aec041d.js",
     "static/js/2.36085f7f.chunk.js",
     "static/css/main.9d5a8178.chunk.css",
     "static/js/main.0932955b.chunk.js"
