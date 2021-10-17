@@ -1,0 +1,22 @@
+.KanjiCard {
+  background: #fff;
+  border-radius: 20px;
+  color: #000;
+  margin: auto;
+  padding: 0.5rem;
+  text-align: left;
+  width: fit-content;
+}
+
+.KanjiCardHeader {
+  text-align: center;
+}
+
+.KanjiCardKanji {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.KanjiCardMeaning {
+  margin: 0;
+}
