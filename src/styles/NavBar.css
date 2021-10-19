@@ -1,13 +1,14 @@
 .Navbar {
   background: #090645;
-  padding: 0.5rem 0;
-  position: relative;
+  padding: 0;
   text-align: left;
   width: auto;
 }
 
 a {
   color: #fff;
+  margin: 0;
+  padding: 0;
   text-decoration: none;
 }
 
@@ -23,11 +24,9 @@ li {
   text-decoration: none;
 }
 
-.UkanaTitle {
-  color: #3e70dc;
-  margin-left: 2rem;
-  margin-top: 0;
-  margin-bottom: 0;
+.ukanaLogo {
+  margin: 1rem 0 0.6rem 1rem;
+  width: 2rem;
 }
 
 .NavLink {
@@ -35,5 +34,7 @@ li {
 }
 
 .non-home {
+  position: relative;
+  bottom: 1.15rem;
   font-size: 1.2rem;
 }
