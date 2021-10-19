@@ -25,16 +25,42 @@ li {
 }
 
 .ukanaLogo {
-  margin: 1rem 0 0.6rem 1rem;
+  margin: 1rem 0 0.4rem 1rem;
   width: 2rem;
 }
 
-.NavLink {
+.navLink {
   margin: 0;
 }
 
 .non-home {
   position: relative;
-  bottom: 1.15rem;
+  bottom: 1rem;
   font-size: 1.2rem;
+}
+
+.gradedKanji {
+  color: rgb(174, 152, 152);
+  font-style: italic;
+}
+
+.numbered {
+  border: solid 3px #fff;
+  border-radius: 50%;
+  height: 30px;
+  text-align: center;
+  width: 30px;
+}
+
+.numbered:hover {
+  animation: numberHover 0.5s forwards;
+}
+
+@keyframes numberHover {
+  from {
+    background: #090645;
+  }
+  to {
+    background: #346adf;
+  }
 }
