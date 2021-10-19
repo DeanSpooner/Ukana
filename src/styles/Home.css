@@ -12,7 +12,7 @@
 }
 
 .UkanaHeaderJp {
-  color: #828282;
+  color: #bf1919;
   font-weight: 300;
 }
 
@@ -20,4 +20,9 @@
   margin: 0;
   margin-left: 1rem;
   font-style: italic;
+}
+
+.SubheaderStart {
+  font-weight: 500;
+  margin-left: 1rem;
 }

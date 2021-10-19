@@ -1,0 +1,39 @@
+.Navbar {
+  background: #090645;
+  padding: 0.5rem 0;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 2rem;
+  text-decoration: none;
+}
+
+.UkanaTitle {
+  color: #3e70dc;
+  margin-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.NavLink {
+  margin: 0;
+}
+
+.non-home {
+  font-size: 1.2rem;
+}
