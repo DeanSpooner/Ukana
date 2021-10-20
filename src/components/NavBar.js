@@ -51,8 +51,8 @@ const NavBar = () => {
           </Link>
         </li>
         <li>
-          <Link className="item non-home" to="/ukana/grade8">
-            <p className="navLink numbered">8</p>
+          <Link className="item non-home" to="/ukana/gradeS">
+            <p className="navLink numbered">S</p>
           </Link>
         </li>
       </ul>

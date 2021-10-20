@@ -65,7 +65,7 @@ function App() {
           />
           <Route
             exact
-            path="/ukana/grade8"
+            path="/ukana/gradeS"
             render={props => <Grade {...props} gradeNum={8} kanji={kanji} />}
           />
           <Route

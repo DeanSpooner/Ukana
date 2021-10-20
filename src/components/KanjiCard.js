@@ -18,7 +18,7 @@ const KanjiCard = ({
         <h1 className="KanjiCardKanji">{kanji}</h1>
         <h1 className="KanjiCardMeaning">{meanings && meanings[0]}</h1>
       </div>
-      <p>Grade: {grade}</p>
+      <p>Grade: {grade === 8 ? "S" : grade}</p>
       <p>
         Meanings:{" "}
         {meanings &&

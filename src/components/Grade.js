@@ -15,7 +15,7 @@ const Grade = ({ gradeNum }) => {
 
   return (
     <div className="Grade">
-      <h1>Grade {gradeNum} Kanji</h1>
+      <h1>Grade {gradeNum === 8 ? "S" : gradeNum} Kanji</h1>
       <p>Click on a kanji for detailed information</p>
       <div className="GradedKanjiMiniCards">
         {gradedKanji.length > 0 &&
