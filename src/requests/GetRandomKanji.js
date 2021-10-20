@@ -9,7 +9,6 @@ const GetRandomKanji = (kanji, setRandomKanji) => {
   axios
     .get(endpoint)
     .then(response => {
-      console.log(response.data);
       setRandomKanji(response.data);
     })
     .catch(error => {

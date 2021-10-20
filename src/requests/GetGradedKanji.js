@@ -8,7 +8,6 @@ const GetGradedKanji = gradedNum => {
   return axios
     .get(endpoint)
     .then(response => {
-      console.log(response.data);
       return response.data;
     })
     .catch(error => {

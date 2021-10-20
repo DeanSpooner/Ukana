@@ -5,6 +5,7 @@ import Home from "./Home";
 import NavBar from "./NavBar";
 import RandomKanji from "./RandomKanji";
 import Grade from "./Grade";
+import KanjiLookup from "./KanjiLookup";
 import GetKanji from "../requests/GetKanji";
 
 function App() {
@@ -66,6 +67,11 @@ function App() {
             exact
             path="/ukana/grade8"
             render={props => <Grade {...props} gradeNum={8} kanji={kanji} />}
+          />
+          <Route
+            exact
+            path="/ukana/kanji"
+            render={props => <KanjiLookup {...props} />}
           />
         </Switch>
       </BrowserRouter>
