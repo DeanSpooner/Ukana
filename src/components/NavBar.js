@@ -21,37 +21,37 @@ const NavBar = () => {
           <p className="navLink gradedKanji">Graded Kanji:</p>
         </li>
         <li>
-          <Link className="item non-home" to="/ukana/random">
+          <Link className="item non-home" to="/ukana/grade1">
             <p className="navLink numbered">1</p>
           </Link>
         </li>
         <li>
-          <Link className="item non-home" to="/ukana/random">
+          <Link className="item non-home" to="/ukana/grade2">
             <p className="navLink numbered">2</p>
           </Link>
         </li>
         <li>
-          <Link className="item non-home" to="/ukana/random">
+          <Link className="item non-home" to="/ukana/grade3">
             <p className="navLink numbered">3</p>
           </Link>
         </li>
         <li>
-          <Link className="item non-home" to="/ukana/random">
+          <Link className="item non-home" to="/ukana/grade4">
             <p className="navLink numbered">4</p>
           </Link>
         </li>
         <li>
-          <Link className="item non-home" to="/ukana/random">
+          <Link className="item non-home" to="/ukana/grade5">
             <p className="navLink numbered">5</p>
           </Link>
         </li>
         <li>
-          <Link className="item non-home" to="/ukana/random">
+          <Link className="item non-home" to="/ukana/grade6">
             <p className="navLink numbered">6</p>
           </Link>
         </li>
         <li>
-          <Link className="item non-home" to="/ukana/random">
+          <Link className="item non-home" to="/ukana/grade8">
             <p className="navLink numbered">8</p>
           </Link>
         </li>
