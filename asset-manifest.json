@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ukana/static/css/main.794a4424.chunk.css",
-    "main.js": "/ukana/static/js/main.f123704c.chunk.js",
-    "main.js.map": "/ukana/static/js/main.f123704c.chunk.js.map",
+    "main.css": "/ukana/static/css/main.ceafc084.chunk.css",
+    "main.js": "/ukana/static/js/main.a038c7b1.chunk.js",
+    "main.js.map": "/ukana/static/js/main.a038c7b1.chunk.js.map",
     "runtime-main.js": "/ukana/static/js/runtime-main.4aec041d.js",
     "runtime-main.js.map": "/ukana/static/js/runtime-main.4aec041d.js.map",
-    "static/js/2.6296bf67.chunk.js": "/ukana/static/js/2.6296bf67.chunk.js",
-    "static/js/2.6296bf67.chunk.js.map": "/ukana/static/js/2.6296bf67.chunk.js.map",
+    "static/js/2.98bac10f.chunk.js": "/ukana/static/js/2.98bac10f.chunk.js",
+    "static/js/2.98bac10f.chunk.js.map": "/ukana/static/js/2.98bac10f.chunk.js.map",
     "index.html": "/ukana/index.html",
-    "static/css/main.794a4424.chunk.css.map": "/ukana/static/css/main.794a4424.chunk.css.map",
-    "static/js/2.6296bf67.chunk.js.LICENSE.txt": "/ukana/static/js/2.6296bf67.chunk.js.LICENSE.txt",
+    "static/css/main.ceafc084.chunk.css.map": "/ukana/static/css/main.ceafc084.chunk.css.map",
+    "static/js/2.98bac10f.chunk.js.LICENSE.txt": "/ukana/static/js/2.98bac10f.chunk.js.LICENSE.txt",
     "static/media/ukana-logo2.4da7d8ca.png": "/ukana/static/media/ukana-logo2.4da7d8ca.png"
   },
   "entrypoints": [
     "static/js/runtime-main.4aec041d.js",
-    "static/js/2.6296bf67.chunk.js",
-    "static/css/main.794a4424.chunk.css",
-    "static/js/main.f123704c.chunk.js"
+    "static/js/2.98bac10f.chunk.js",
+    "static/css/main.ceafc084.chunk.css",
+    "static/js/main.a038c7b1.chunk.js"
   ]
 }
