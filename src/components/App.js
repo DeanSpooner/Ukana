@@ -6,7 +6,8 @@ import NavBar from "./NavBar";
 import RandomKanji from "./RandomKanji";
 import Grade from "./Grade";
 import KanjiLookup from "./KanjiLookup";
-import SearchedWord from "./SearchedWord";
+import Hiragana from "./Hiragana";
+import Katakana from "./Katakana";
 import GetKanji from "../requests/GetKanji";
 
 function App() {
@@ -76,8 +77,13 @@ function App() {
           />
           <Route
             exact
-            path="/ukana/searchedWord"
-            render={props => <SearchedWord {...props} />}
+            path="/ukana/hiragana"
+            render={props => <Hiragana {...props} />}
+          />
+          <Route
+            exact
+            path="/ukana/katakana"
+            render={props => <Katakana {...props} />}
           />
         </Switch>
       </BrowserRouter>
