@@ -21,3 +21,14 @@
 .KanjiCardMeaning {
   margin: 0;
 }
+
+.refreshRandom {
+  background-color: #bf1919;
+  border: solid 3px #bf1919;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  margin: 0 auto;
+  width: fit-content;
+}
