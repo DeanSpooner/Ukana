@@ -8,10 +8,12 @@ import Grade from "./Grade";
 import KanjiLookup from "./KanjiLookup";
 import Hiragana from "./Hiragana";
 import Katakana from "./Katakana";
+import SearchedWord from "./SearchedWord";
 import GetKanji from "../requests/GetKanji";
 
 function App() {
   const [kanji, setKanji] = useState(["一"]);
+  const [searchedWord, setSearchedWord] = useState("");
 
   useEffect(() => {
     async function fetchKanji() {
@@ -23,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar />
+        <NavBar setSearchedWord={setSearchedWord} />
         <Switch>
           <Route
             exact
@@ -84,6 +86,13 @@ function App() {
             exact
             path="/ukana/katakana"
             render={props => <Katakana {...props} />}
+          />
+          <Route
+            exact
+            path="/ukana/searchedWord"
+            render={props => (
+              <SearchedWord {...props} searchedWord={searchedWord} />
+            )}
           />
         </Switch>
       </BrowserRouter>

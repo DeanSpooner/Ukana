@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/NavBar.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import ukanaLogo from "../images/ukana-logo2.png";
 
-const NavBar = () => {
+const NavBar = ({ setSearchedWord }) => {
+  const [typedWord, setTypedWord] = useState("");
+  const history = useHistory();
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setSearchedWord(typedWord);
+    setTypedWord("");
+    history.push({
+      pathname: "/ukana/searchedWord",
+    });
+  };
+
   return (
     <div className="Navbar">
       <ul className="navbar-links">
@@ -64,6 +76,17 @@ const NavBar = () => {
           <Link className="item non-home" to="/ukana/katakana">
             <p className="navLink">Katakana</p>
           </Link>
+        </li>
+        <li>
+          <form className="wordSearchForm non-home" onSubmit={handleSubmit}>
+            <input
+              className="wordSearchInput"
+              type="text"
+              name="wordSearch"
+              placeholder="Search English word..."
+              onChange={event => setTypedWord(event.target.value)}
+            />
+          </form>
         </li>
       </ul>
     </div>
