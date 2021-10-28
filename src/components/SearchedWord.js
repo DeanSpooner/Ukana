@@ -37,7 +37,7 @@ const SearchedWord = ({ searchedWord }) => {
         Romaji:{" "}
         {wordResults.length === 0
           ? "Ukana cannot find your word. Please check your spelling!"
-          : toRomaji(wordResults[0].japanese[0].reading)}
+          : toRomaji(wordResults[0].japanese[0].reading).toLowerCase()}
       </p>
       <p>
         Definition:{" "}
@@ -68,7 +68,8 @@ const SearchedWord = ({ searchedWord }) => {
             kanji !== "ゥ" &&
             kanji !== "ェ" &&
             kanji !== "ォ" &&
-            kanji !== "ッ" && (
+            kanji !== "ッ" &&
+            kanji !== "ー" && (
               <Link
                 className="item non-home"
                 to={{ pathname: "/ukana/kanji", state: { kanji: kanji } }}
