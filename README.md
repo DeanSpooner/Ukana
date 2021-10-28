@@ -70,7 +70,6 @@ Here you can study the different katakana characters and their pronunciations. T
 ### Search
 
 You can search for any English word and see its meaning. This is a work-in-progress, but does return some basic information, including Japanese writing and pronunciation. More results (and much more styling..!) will be added to this in future updates.
-<>
 
 <div align="center">
 <img src="./src/images/readme/Searched.png">
