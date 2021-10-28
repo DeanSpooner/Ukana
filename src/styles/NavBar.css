@@ -25,8 +25,53 @@ li {
 }
 
 .ukanaLogo {
+  animation: logoHoverAfter 0.5s forwards;
+  border: 3px solid transparent;
+  border-radius: 12px;
   margin: 1rem 0 0.4rem 1rem;
-  width: 2rem;
+  width: 1.9rem;
+}
+
+.ukanaLogo:hover {
+  animation: logoHover 0.5s forwards;
+  border: 3px solid #cdc618;
+  border-radius: 12px;
+}
+
+@keyframes logoHover {
+  0% {
+    border-color: transparent transparent transparent transparent;
+  }
+  25% {
+    border-color: #cdc618 transparent transparent transparent;
+  }
+  50% {
+    border-color: #cdc618 #cdc618 transparent transparent;
+  }
+  75% {
+    border-color: #cdc618 #cdc618 #cdc618 transparent;
+  }
+  100% {
+    border-color: #cdc618 #cdc618 #cdc618 #cdc618;
+  }
+}
+
+@keyframes logoHoverAfter {
+  0% {
+    border-color: #cdc618 #cdc618 #cdc618 #cdc618;
+  }
+  25% {
+    border-color: #cdc618 #cdc618 #cdc618 transparent;
+  }
+  50% {
+    border-color: #cdc618 #cdc618 transparent transparent;
+  }
+  75% {
+    border-color: #cdc618 transparent transparent transparent;
+  }
+  100% {
+    border-color: transparent transparent transparent transparent;
+  }
 }
 
 .navLink {
@@ -40,11 +85,53 @@ li {
 }
 
 .gradedKanji {
-  color: rgb(174, 152, 152);
+  color: #ae9898;
   font-style: italic;
 }
 
+.worded {
+  animation: wordedHoverAfter 0.5s forwards;
+  border: solid 0px;
+  border-radius: 25px;
+  color: #fff;
+  outline-offset: 3px;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: transparent;
+}
+
+.worded:hover {
+  animation: wordedHover 0.5s forwards;
+}
+
+@keyframes wordedHover {
+  from {
+    background: #090645;
+    color: #fff;
+    outline-color: transparent;
+  }
+  to {
+    background: #2a50a0;
+    color: #cdc618;
+    outline-color: #cdc618;
+  }
+}
+
+@keyframes wordedHoverAfter {
+  from {
+    background: #2a50a0;
+    color: #cdc618;
+    outline-color: #cdc618;
+  }
+  to {
+    background: #090645;
+    color: #fff;
+    outline-color: transparent;
+  }
+}
+
 .numbered {
+  animation: numberHoverAfter 0.5s forwards;
   border: solid 3px #fff;
   border-radius: 50%;
   height: 30px;
@@ -57,18 +144,101 @@ li {
 }
 
 @keyframes numberHover {
-  from {
+  0% {
+    border-color: #fff #fff #fff #fff;
     background: #090645;
+    color: #fff;
   }
-  to {
-    background: #346adf;
+  25% {
+    border-color: #cdc618 #fff #fff #fff;
+  }
+  50% {
+    border-color: #cdc618 #cdc618 #fff #fff;
+  }
+  75% {
+    border-color: #cdc618 #cdc618 #cdc618 #fff;
+  }
+  100% {
+    background: #2a50a0;
+    border-color: #cdc618 #cdc618 #cdc618 #cdc618;
+    color: #cdc618;
+  }
+}
+
+@keyframes numberHoverAfter {
+  0% {
+    background: #2a50a0;
+    border-color: #cdc618 #cdc618 #cdc618 #cdc618;
+    color: #cdc618;
+  }
+  25% {
+    border-color: #cdc618 #cdc618 #cdc618 #fff;
+  }
+  50% {
+    border-color: #cdc618 #cdc618 #fff #fff;
+  }
+  75% {
+    border-color: #cdc618 #fff #fff #fff;
+  }
+  100% {
+    border-color: #fff #fff #fff #fff;
+    background: #090645;
+    color: #fff;
   }
 }
 
 .wordSearchInput {
-  border: solid 0px;
+  animation: inputFocusAfter 0.5s forwards;
+  background-color: #142b65;
+  border: solid 3px transparent;
   border-radius: 25px;
+  color: #fff;
   font-family: "Noto Sans JP", sans-serif;
   height: 1.5rem;
   text-align: center;
+  outline-offset: 3px;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: transparent;
+}
+
+::placeholder {
+  color: #cdc618;
+}
+
+.wordSearchInput:focus {
+  animation: inputFocus 0.5s forwards;
+  background: #fff;
+  outline-color: #cdc618;
+  color: #000;
+}
+
+.wordSearchInput:focus::placeholder {
+  color: #000;
+}
+
+@keyframes inputFocus {
+  from {
+    background: #142b65;
+    color: #fff;
+    outline-color: transparent;
+  }
+  to {
+    background: #fff;
+    color: #000;
+    outline-color: #cdc618;
+  }
+}
+
+@keyframes inputFocusAfter {
+  from {
+    background: #fff;
+    color: #000;
+    outline-color: #cdc618;
+  }
+  to {
+    background: #142b65;
+    color: #fff;
+    outline-color: transparent;
+  }
 }

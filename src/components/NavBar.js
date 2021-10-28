@@ -26,7 +26,7 @@ const NavBar = ({ setSearchedWord }) => {
         </li>
         <li>
           <Link className="item non-home" to="/ukana/random">
-            <p className="navLink">Random Kanji</p>
+            <p className="navLink worded">Random Kanji</p>
           </Link>
         </li>
         <li className="item non-home">
@@ -69,12 +69,12 @@ const NavBar = ({ setSearchedWord }) => {
         </li>
         <li>
           <Link className="item non-home" to="/ukana/hiragana">
-            <p className="navLink">Hiragana</p>
+            <p className="navLink worded">Hiragana</p>
           </Link>
         </li>
         <li>
           <Link className="item non-home" to="/ukana/katakana">
-            <p className="navLink">Katakana</p>
+            <p className="navLink worded">Katakana</p>
           </Link>
         </li>
         <li>
