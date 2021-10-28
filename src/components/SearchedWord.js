@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { kanaArray } from "../data/Kana";
+import { toRomaji } from "kana-romaji";
 import KanjiMiniCard from "./KanjiMiniCard";
 import GetSearchedWord from "../requests/GetSearchedWord";
 
@@ -31,6 +32,12 @@ const SearchedWord = ({ searchedWord }) => {
         {wordResults.length === 0
           ? "Ukana cannot find your word. Please check your spelling!"
           : wordResults[0].japanese[0].reading}
+      </p>
+      <p>
+        Romaji:{" "}
+        {wordResults.length === 0
+          ? "Ukana cannot find your word. Please check your spelling!"
+          : toRomaji(wordResults[0].japanese[0].reading)}
       </p>
       <p>
         Definition:{" "}
