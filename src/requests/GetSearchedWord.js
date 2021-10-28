@@ -3,7 +3,7 @@
 import axios from "axios";
 
 const GetSearchedWord = (word, setWordResults) => {
-  const endpoint = `https://thingproxy.freeboard.io/fetch/http://beta.jisho.org/api/v1/search/words?keyword=${word}`;
+  const endpoint = `https://secret-ocean-49799.herokuapp.com/https://jisho.org/api/v1/search/words?keyword=${word}`;
 
   axios
     .get(endpoint)
