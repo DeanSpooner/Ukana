@@ -12,7 +12,7 @@
   margin-top: 1rem;
   padding: 0.5rem;
   text-align: center;
-  flex: 0 0 16%;
+  flex: 1 1 16%;
 }
 
 .emptyCard {
@@ -31,4 +31,16 @@
   font-size: 3.5vw;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 798px) and (min-width: 600px) {
+  .KanaMiniCard {
+    flex: 1 1 14%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .KanaMiniCard {
+    flex: 1 1 12%;
+  }
 }
