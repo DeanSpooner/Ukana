@@ -1,3 +1,4 @@
+import { toRomaji } from "kana-romaji";
 import React from "react";
 import "../styles/KanjiCard.css";
 
@@ -36,8 +37,8 @@ const KanjiCard = ({
           ? kun.map(element => (
               <>
                 {kun[kun.length - 1] !== element
-                  ? " " + element + ","
-                  : " " + element}
+                  ? " " + element + " (" + toRomaji(element) + "),"
+                  : " " + element + " (" + toRomaji(element) + ")"}
               </>
             ))
           : "none"}
@@ -48,8 +49,16 @@ const KanjiCard = ({
           ? on.map(element => (
               <>
                 {on[on.length - 1] !== element
-                  ? " " + element + ","
-                  : " " + element}
+                  ? " " +
+                    element +
+                    " (" +
+                    toRomaji(element).toLowerCase() +
+                    "),"
+                  : " " +
+                    element +
+                    " (" +
+                    toRomaji(element).toLowerCase() +
+                    ")"}
               </>
             ))
           : "none"}
