@@ -5,6 +5,7 @@ import ukanaLogo from "../images/ukana-logo2.png";
 
 const NavBar = ({ setSearchedWord }) => {
   const [typedWord, setTypedWord] = useState("");
+  const [isHover, setIsHover] = useState(null);
   const history = useHistory();
 
   const handleSubmit = event => {
@@ -69,14 +70,39 @@ const NavBar = ({ setSearchedWord }) => {
         </li>
         <li>
           <Link className="item non-home" to="/ukana/hiragana">
-            <p className="navLink worded">Hiragana</p>
+            <p
+              className={`navLink worded ${
+                isHover === "hiragana" && "hiraganaHover"
+              }`}
+              onMouseEnter={e => {
+                setIsHover("hiragana");
+              }}
+              onMouseLeave={e => {
+                setIsHover(null);
+              }}
+            >
+              H{isHover === "hiragana" && "iragana"}
+            </p>
           </Link>
         </li>
         <li>
           <Link className="item non-home" to="/ukana/katakana">
-            <p className="navLink worded">Katakana</p>
+            <p
+              className={`navLink worded ${
+                isHover === "katakana" && "katakanaHover"
+              }`}
+              onMouseEnter={e => {
+                setIsHover("katakana");
+              }}
+              onMouseLeave={e => {
+                setIsHover(null);
+              }}
+            >
+              K{isHover === "katakana" && "atakana"}
+            </p>
           </Link>
         </li>
+        <li className="finalSpacer"></li>
         <li>
           <form className="wordSearchForm non-home" onSubmit={handleSubmit}>
             <input

@@ -242,5 +242,6 @@ li {
     background: #142b65;
     color: #fff;
     outline-color: transparent;
+    text-align: right;
   }
 }
