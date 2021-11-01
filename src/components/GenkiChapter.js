@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GetGenkiChapter from "../requests/GetGenkiChapter";
+import GenkiVocabTable from "./GenkiVocabTable";
+import GenkiKanjiTable from "./GenkiKanjiTable";
 import "../styles/GenkiChapter.css";
 
 const GenkiChapter = ({ chapter }) => {
@@ -18,23 +20,12 @@ const GenkiChapter = ({ chapter }) => {
   return (
     <div className="GenkiChapter">
       <h1>Chapter {chapter}</h1>
-      <h2>Vocabulary</h2>
-      {genkiChapterData.vocab.map(vocab => (
-        <>
-          <p>{vocab.word}</p>
-          <p>{vocab.reading}</p>
-          <p>{vocab.meaning}</p>
-        </>
-      ))}
-      <h2>Kanji</h2>
-      {genkiChapterData.kanji.map(kanji => (
-        <>
-          <p>{kanji.kanji}</p>
-          <p>{kanji.reading}</p>
-          <p>{kanji.meaning}</p>
-          <p>{kanji.examples}</p>
-        </>
-      ))}
+      {genkiChapterData.vocab.length > 0 && (
+        <GenkiVocabTable vocab={genkiChapterData.vocab} />
+      )}
+      {genkiChapterData.kanji.length > 0 && (
+        <GenkiKanjiTable kanji={genkiChapterData.kanji} />
+      )}
     </div>
   );
 };

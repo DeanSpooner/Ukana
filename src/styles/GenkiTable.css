@@ -1,0 +1,57 @@
+.table {
+  border-collapse: collapse;
+  font-size: 1.5rem;
+  margin: auto;
+  width: 90%;
+}
+
+th {
+  position: relative;
+  margin: auto;
+}
+
+.vocabRow:nth-of-type(2n) {
+  background-color: #3614b1;
+}
+.vocabRow:nth-of-type(2n-1) {
+  background-color: #5b46a5;
+}
+
+.GenkiVocabTable {
+  margin-bottom: 5rem;
+}
+
+td {
+  padding: 0.5rem 0;
+}
+
+.vocabRow:hover {
+  animation: glowVocabHover 0.5s forwards;
+}
+
+@keyframes glowVocabHover {
+  to {
+    background-color: #7e6ac4;
+  }
+}
+
+.kanjiRowKanji {
+  font-size: 3rem;
+}
+
+.kanjiRow:nth-of-type(2n) {
+  background-color: #121113;
+}
+.kanjiRow:nth-of-type(2n-1) {
+  background-color: #231f32;
+}
+
+.kanjiRow:hover {
+  animation: glowKanjiHover 0.5s forwards;
+}
+
+@keyframes glowKanjiHover {
+  to {
+    background-color: #2d2a2d;
+  }
+}
