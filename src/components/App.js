@@ -8,6 +8,7 @@ import Grade from "./Grade";
 import KanjiLookup from "./KanjiLookup";
 import Hiragana from "./Hiragana";
 import Katakana from "./Katakana";
+import Genki from "./Genki";
 import SearchedWord from "./SearchedWord";
 import GetKanji from "../requests/GetKanji";
 
@@ -86,6 +87,11 @@ function App() {
             exact
             path="/ukana/katakana"
             render={props => <Katakana {...props} />}
+          />
+          <Route
+            exact
+            path="/ukana/genki"
+            render={props => <Genki {...props} />}
           />
           <Route
             exact

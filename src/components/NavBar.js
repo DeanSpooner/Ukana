@@ -102,7 +102,23 @@ const NavBar = ({ setSearchedWord }) => {
             </p>
           </Link>
         </li>
-        <li className="finalSpacer"></li>
+        <li>
+          <Link className="item non-home" to="/ukana/genki">
+            <p
+              className={`navLink worded ${
+                isHover === "genki" && "genkiHover"
+              }`}
+              onMouseEnter={e => {
+                setIsHover("genki");
+              }}
+              onMouseLeave={e => {
+                setIsHover(null);
+              }}
+            >
+              G{isHover === "genki" && "enki"}
+            </p>
+          </Link>
+        </li>
         <li>
           <form className="wordSearchForm non-home" onSubmit={handleSubmit}>
             <input
