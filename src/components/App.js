@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "../styles/App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Home";
+import Login from "./Login";
 import NavBar from "./NavBar";
 import RandomKanji from "./RandomKanji";
 import Grade from "./Grade";
@@ -32,6 +33,11 @@ function App() {
             exact
             path="/ukana"
             render={props => <Home {...props} kanji={kanji} />}
+          />
+          <Route
+            exact
+            path="/ukana/login"
+            render={props => <Login {...props} />}
           />
           <Route
             exact

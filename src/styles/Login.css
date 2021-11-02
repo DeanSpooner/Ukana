@@ -1,0 +1,105 @@
+.Login {
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 10%;
+  height: 85vh;
+}
+
+.welcome,
+.login-message {
+  margin: 0;
+  text-align: center;
+}
+
+.welcome {
+  font-size: 2rem;
+}
+
+.login-message {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.login-form {
+  animation: loginRev 50s infinite;
+  background: rgb(74, 0, 143);
+  background: linear-gradient(
+    60deg,
+    rgba(74, 0, 143, 1) 0%,
+    rgba(74, 0, 143, 1) 17%,
+    rgb(103, 0, 0) 17%,
+    rgba(103, 0, 0, 1) 22%,
+    rgba(0, 39, 84, 1) 22%,
+    rgba(0, 39, 84, 1) 51%,
+    rgba(103, 0, 0, 1) 51%,
+    rgba(103, 0, 0, 1) 56%,
+    rgba(0, 21, 46, 1) 56%,
+    rgba(0, 21, 46, 1) 84%,
+    rgba(103, 0, 0, 1) 84%,
+    rgba(103, 0, 0, 1) 89%,
+    rgba(74, 0, 143, 1) 89%,
+    rgba(74, 0, 143, 1) 100%
+  );
+  background-size: 300%;
+  background-position: -500px;
+  border-radius: 25px;
+  line-height: 3rem;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  width: max-content;
+}
+
+.login-input {
+  display: inline-block;
+  width: 45%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.input {
+  border: 0;
+  border-radius: 12px;
+  color: #000;
+  font-size: 0.94rem;
+  height: 1.5rem;
+  text-align: center;
+}
+.input::placeholder {
+  color: #666;
+}
+
+.login-form-button {
+  background-color: #4cbf5d;
+  border: 0;
+  border-radius: 25px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.5rem;
+}
+
+.login-form-button:hover {
+  animation: loginGlowHover 1s infinite;
+  cursor: pointer;
+}
+
+@keyframes loginRev {
+  from {
+    background-position: -200px;
+  }
+  to {
+    background-position: 500px;
+  }
+}
+
+@keyframes loginGlowHover {
+  50% {
+    outline-color: #27a0eb;
+    outline-offset: 3px;
+    outline-style: solid;
+    outline-width: 3px;
+  }
+  100% {
+    background-color: #15e673;
+    outline-offset: 6px;
+    outline-color: #ffb1b1;
+  }
+}

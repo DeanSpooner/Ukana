@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import "../styles/NavBar.css";
 import { Link, useHistory } from "react-router-dom";
+import { useContext } from "react/cjs/react.development";
+import { AuthContext } from "../contexts/AuthContext";
 import ukanaLogo from "../images/ukana-logo2.png";
+import userIcon from "../images/user.png";
 
 const NavBar = ({ setSearchedWord }) => {
   const [typedWord, setTypedWord] = useState("");
   const [isHover, setIsHover] = useState(null);
   const history = useHistory();
+  const ukanaUser = useContext(AuthContext);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -15,6 +19,15 @@ const NavBar = ({ setSearchedWord }) => {
     history.push({
       pathname: "/ukana/searchedWord",
     });
+  };
+
+  const handleLogout = event => {
+    event.preventDefault();
+    localStorage.removeItem("ukanaToken");
+    ukanaUser.setCurrentUkanaUser("");
+    localStorage.removeItem("ukanaUser");
+    ukanaUser.setAuth(false);
+    history.push("/ukana");
   };
 
   return (
@@ -130,6 +143,18 @@ const NavBar = ({ setSearchedWord }) => {
             />
           </form>
         </li>
+        <li>
+          <Link className="item non-home" to="/ukana/login">
+            <img src={userIcon} className="userIcon worded" alt="User" />
+          </Link>
+        </li>
+        {localStorage.getItem("ukanaToken") && (
+          <li>
+            <button onClick={handleLogout} className="logout-button">
+              Logout
+            </button>
+          </li>
+        )}
       </ul>
     </div>
   );

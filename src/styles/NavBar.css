@@ -245,3 +245,40 @@ li {
     text-align: right;
   }
 }
+
+.userIcon {
+  position: relative;
+  top: 0.75rem;
+  width: 3vw;
+}
+
+.logout-button {
+  background-color: #e9740e;
+  border: 0;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  padding: 0.35rem;
+  position: relative;
+  bottom: 0.9rem;
+}
+
+.logout-button:hover {
+  animation: logoutGlowHover 1s infinite;
+  cursor: pointer;
+}
+
+@keyframes logoutGlowHover {
+  50% {
+    background-color: #e69751;
+    outline-color: #cdc618;
+    outline-offset: 3px;
+    outline-style: solid;
+    outline-width: 3px;
+  }
+  100% {
+    outline-offset: 6px;
+    outline-color: #aaf2ff;
+  }
+}
