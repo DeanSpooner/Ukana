@@ -5,10 +5,10 @@ import "./styles/index.css";
 import App from "./components/App";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <AuthProvider>
+  <AuthProvider>
+    <React.StrictMode>
       <App />
-    </AuthProvider>
-  </React.StrictMode>,
+    </React.StrictMode>
+  </AuthProvider>,
   document.getElementById("root")
 );
