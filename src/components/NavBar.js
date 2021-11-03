@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../styles/NavBar.css";
 import { Link, useHistory } from "react-router-dom";
-import { useContext } from "react/cjs/react.development";
 import { AuthContext } from "../contexts/AuthContext";
 import ukanaLogo from "../images/ukana-logo2.png";
 import userIcon from "../images/user.png";

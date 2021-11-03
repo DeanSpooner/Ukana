@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import "../styles/Login.css";
-import { useContext } from "react/cjs/react.development";
 import { AuthContext } from "../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
 import Alert from "./Alert";
