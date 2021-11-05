@@ -142,6 +142,44 @@ const NavBar = ({ setSearchedWord }) => {
             />
           </form>
         </li>
+        {ukanaUser.currentUkanaUser.userType === "admin" && (
+          <>
+            <li>
+              <Link className="item non-home" to="/ukana/addvocab">
+                <p
+                  className={`navLink worded ${
+                    isHover === "vocab" && "vocabHover"
+                  }`}
+                  onMouseEnter={e => {
+                    setIsHover("vocab");
+                  }}
+                  onMouseLeave={e => {
+                    setIsHover(null);
+                  }}
+                >
+                  単{isHover === "vocab" && "語"}
+                </p>
+              </Link>
+            </li>
+            <li>
+              <Link className="item non-home" to="/ukana/addkanji">
+                <p
+                  className={`navLink worded ${
+                    isHover === "kanji" && "kanjiHover"
+                  }`}
+                  onMouseEnter={e => {
+                    setIsHover("kanji");
+                  }}
+                  onMouseLeave={e => {
+                    setIsHover(null);
+                  }}
+                >
+                  漢{isHover === "kanji" && "字"}
+                </p>
+              </Link>
+            </li>
+          </>
+        )}
         <li>
           <Link className="item non-home" to="/ukana/login">
             <img src={userIcon} className="userIcon worded" alt="User" />

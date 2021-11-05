@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [currentUkanaUser, setCurrentUkanaUser] = useState("");
 
   if (localStorage.getItem("ukanaUser") && currentUkanaUser === "") {
-    setCurrentUkanaUser(JSON.parse(localStorage.getItem("user")));
+    setCurrentUkanaUser(JSON.parse(localStorage.getItem("ukanaUser")));
   }
 
   return (

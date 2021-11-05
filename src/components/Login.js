@@ -48,7 +48,7 @@ const Login = () => {
           ukanaUser.setCurrentUkanaUser(
             JSON.parse(localStorage.getItem("ukanaUser"))
           );
-          console.log(ukanaUser.currentUser);
+          console.log(ukanaUser.currentUkanaUser);
           ukanaUser.setAuth(true);
           history.push("/ukana");
           ukanaUser.setUsername("");
