@@ -13,6 +13,7 @@ import Genki from "./Genki";
 import SearchedWord from "./SearchedWord";
 import GetKanji from "../requests/GetKanji";
 import AddVocab from "./admin/AddVocab";
+import AddKanji from "./admin/AddKanji";
 
 function App() {
   const [kanji, setKanji] = useState(["一"]);
@@ -111,6 +112,11 @@ function App() {
             exact
             path="/ukana/addvocab"
             render={props => <AddVocab {...props} />}
+          />
+          <Route
+            exact
+            path="/ukana/addkanji"
+            render={props => <AddKanji {...props} />}
           />
         </Switch>
       </BrowserRouter>

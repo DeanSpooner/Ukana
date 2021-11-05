@@ -1,29 +1,32 @@
 import React, { useState } from "react";
-import PostVocab from "../../requests/PostVocab.js";
+import PostKanji from "../../requests/PostKanji.js";
 
-const AddVocab = () => {
-  const [vocab, setVocab] = useState([]);
-  const [word, setWord] = useState("");
+const AddKanji = () => {
+  const [kanjiObject, setKanjiObject] = useState([]);
+  const [kanji, setKanji] = useState("");
   const [reading, setReading] = useState("");
   const [meaning, setMeaning] = useState("");
+  const [examples, setExamples] = useState("");
 
   const handleRowSubmit = event => {
     event.preventDefault();
-    setVocab([
-      ...vocab,
+    setKanjiObject([
+      ...kanjiObject,
       {
-        word: word,
+        kanji: kanji,
         reading: reading,
         meaning: meaning,
+        examples: examples,
       },
     ]);
-    setWord("");
+    setKanji("");
     setReading("");
     setMeaning("");
+    setExamples("");
   };
 
-  const handleWordChange = event => {
-    setWord(event.target.value);
+  const handleKanjiChange = event => {
+    setKanji(event.target.value);
   };
 
   const handleReadingChange = event => {
@@ -34,20 +37,25 @@ const AddVocab = () => {
     setMeaning(event.target.value);
   };
 
+  const handleExamplesChange = event => {
+    setExamples(event.target.value);
+  };
+
   const handleAllSubmit = event => {
     event.preventDefault();
-    PostVocab(vocab);
+    PostKanji(kanjiObject);
   };
 
   return (
     <div className="AddVocab">
-      <h2>Add Vocab</h2>
-      {vocab.length > 0 && <h3>Waiting to submit:</h3>}
-      {vocab.length > 0 &&
-        vocab.map(row => (
+      <h2>Add Kanji</h2>
+      {kanjiObject.length > 0 && <h3>Waiting to submit:</h3>}
+      {kanjiObject.length > 0 &&
+        kanjiObject.map(row => (
           <>
             <p>
-              Word: {row.word}, reading: {row.reading}, meaning: {row.meaning}
+              Word: {row.kanji}, reading: {row.reading}, meaning: {row.meaning},
+              examples: {row.examples}
             </p>
           </>
         ))}
@@ -55,14 +63,17 @@ const AddVocab = () => {
         <table className="table table-responsive">
           <thead>
             <tr>
-              <th className="addVocabHead" name="addVocabWord">
-                Word
+              <th className="addKanjiHead" name="addKanjiKanji">
+                Kanji
               </th>
-              <th className="addReadingHead" name="addVocabReading">
+              <th className="addReadingHead" name="addKanjiReading">
                 Reading
               </th>
-              <th className="addMeaningHead" name="addVocabMeaning">
+              <th className="addMeaningHead" name="addKanjiMeaning">
                 Meaning
+              </th>
+              <th className="addExamplesHead" name="addKanjiExamples">
+                Examples
               </th>
               <th className="addSubmitHead" name="addSubmitHead"></th>
             </tr>
@@ -72,15 +83,15 @@ const AddVocab = () => {
               <td>
                 <input
                   type="text"
-                  id="addVocabWord"
-                  value={word}
-                  onChange={handleWordChange}
+                  id="addKanjiKanji"
+                  value={kanji}
+                  onChange={handleKanjiChange}
                 />
               </td>
               <td>
                 <input
                   type="text"
-                  id="addVocabReading"
+                  id="addKanjiReading"
                   value={reading}
                   onChange={handleReadingChange}
                 />
@@ -88,9 +99,17 @@ const AddVocab = () => {
               <td>
                 <input
                   type="text"
-                  id="addVocabMeaning"
+                  id="addKanjiMeaning"
                   value={meaning}
                   onChange={handleMeaningChange}
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  id="addKanjiExamples"
+                  value={examples}
+                  onChange={handleExamplesChange}
                 />
               </td>
               <td>
@@ -107,4 +126,4 @@ const AddVocab = () => {
   );
 };
 
-export default AddVocab;
+export default AddKanji;
