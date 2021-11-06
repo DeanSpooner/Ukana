@@ -2,9 +2,8 @@
 
 import axios from "axios";
 
-const PostVocab = vocab => {
+const PostVocab = (vocab, setVocab, setSuccess) => {
   const endpoint = `https://ukana.herokuapp.com/genki/1/manyVocab`;
-  console.log("Axios running");
   const finalVocab = {
     vocabArray: vocab,
   };
@@ -17,7 +16,8 @@ const PostVocab = vocab => {
       },
     })
     .then(response => {
-      console.log(response.data);
+      setSuccess(response.data);
+      setVocab([]);
       return response.data;
     })
     .catch(error => {
