@@ -2,9 +2,8 @@
 
 import axios from "axios";
 
-const PostKanji = kanjiObject => {
+const PostKanji = (kanjiObject, setKanjiObject, setSuccess) => {
   const endpoint = `https://ukana.herokuapp.com/genki/1/manyKanji`;
-  console.log("Axios running");
   const finalKanji = {
     kanjiArray: kanjiObject,
   };
@@ -17,7 +16,8 @@ const PostKanji = kanjiObject => {
       },
     })
     .then(response => {
-      console.log(response.data);
+      setSuccess(response.data);
+      setKanjiObject([]);
       return response.data;
     })
     .catch(error => {

@@ -73,23 +73,48 @@ td {
   width: 90%;
 }
 
+.kanjiKanjiInput {
+  font-size: 5rem;
+  width: 8rem;
+}
+
 .submitVocabKanji {
   border: 0;
   border-radius: 25px;
-  background-color: rgb(14, 116, 225);
+  background-color: #0e74e1;
   color: #fff;
   cursor: pointer;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.5rem;
 }
 
+.submitVocabKanji:hover {
+  animation: submitVocabKanjiHover 0.5s forwards;
+}
+
+@keyframes submitVocabKanjiHover {
+  to {
+    background-color: #3091f9;
+  }
+}
+
 .submitAll {
   border: 0;
   border-radius: 0 0 25px 25px;
-  background-color: rgb(162, 14, 225);
+  background-color: #a20ee1;
   color: #fff;
   cursor: pointer;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 2rem;
   width: 90%;
+}
+
+.submitAll:hover {
+  animation: submitAllHover 0.5s forwards;
+}
+
+@keyframes submitAllHover {
+  to {
+    background-color: #c743ff;
+  }
 }

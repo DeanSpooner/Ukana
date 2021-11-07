@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PostKanji from "../../requests/PostKanji.js";
+import "../../styles/AddVocabKanji.css";
 
 const AddKanji = () => {
   const [kanjiObject, setKanjiObject] = useState([]);
@@ -7,6 +8,7 @@ const AddKanji = () => {
   const [reading, setReading] = useState("");
   const [meaning, setMeaning] = useState("");
   const [examples, setExamples] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleRowSubmit = event => {
     event.preventDefault();
@@ -43,7 +45,7 @@ const AddKanji = () => {
 
   const handleAllSubmit = event => {
     event.preventDefault();
-    PostKanji(kanjiObject);
+    PostKanji(kanjiObject, setKanjiObject, setSuccess);
   };
 
   return (
@@ -59,10 +61,11 @@ const AddKanji = () => {
             </p>
           </>
         ))}
+      {success !== "" && <p>{success}</p>}
       <form onSubmit={handleRowSubmit}>
         <table className="table table-responsive">
           <thead>
-            <tr>
+            <tr className="vocabKanjiHead">
               <th className="addKanjiHead" name="addKanjiKanji">
                 Kanji
               </th>
@@ -79,12 +82,13 @@ const AddKanji = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr className="vocabKanjiRow">
               <td>
                 <input
                   type="text"
                   id="addKanjiKanji"
                   value={kanji}
+                  className="vocabKanjiInput kanjiKanjiInput"
                   onChange={handleKanjiChange}
                 />
               </td>
@@ -93,6 +97,7 @@ const AddKanji = () => {
                   type="text"
                   id="addKanjiReading"
                   value={reading}
+                  className="vocabKanjiInput"
                   onChange={handleReadingChange}
                 />
               </td>
@@ -101,6 +106,7 @@ const AddKanji = () => {
                   type="text"
                   id="addKanjiMeaning"
                   value={meaning}
+                  className="vocabKanjiInput"
                   onChange={handleMeaningChange}
                 />
               </td>
@@ -109,18 +115,21 @@ const AddKanji = () => {
                   type="text"
                   id="addKanjiExamples"
                   value={examples}
+                  className="vocabKanjiInput"
                   onChange={handleExamplesChange}
                 />
               </td>
               <td>
-                <button type="submit">Submit</button>
+                <button type="submit" className="submitVocabKanji">
+                  Submit
+                </button>
               </td>
             </tr>
           </tbody>
         </table>
       </form>
-      <button type="button" onClick={handleAllSubmit}>
-        Submit All!!!
+      <button type="button" className="submitAll" onClick={handleAllSubmit}>
+        Submit All!
       </button>
     </div>
   );
